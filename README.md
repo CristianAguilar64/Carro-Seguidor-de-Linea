@@ -2,7 +2,7 @@
 Repositorio para la clase de GITHUB proyects
 # Integrantes:
 - Cristian David Aguilar Becerra (202478586)
-- Martin David Cortes Osorio
+- Martin David Cortes Osorio (202478552)
 - Carlos Andres Dominguez Aristizabal
 - Juan Jose Gil Cortes
 # Carrera
