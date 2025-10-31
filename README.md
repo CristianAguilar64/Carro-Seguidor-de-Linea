@@ -93,17 +93,7 @@ Cada Issue representa una parte funcional claramente definible del proyecto.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 📋 Entregas del Proyecto
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-# 🧭 Roles del Equipo
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 # Acuerdos del Equipo
-# ⏳ Duración de los Sprints
-# 🕐 Daily Scrum
 # 🧱 Metodología de Trabajo
 - Scrum + Kanban usando GitHub Projects.
 
@@ -113,21 +103,71 @@ Cada Issue representa una parte funcional claramente definible del proyecto.
 
 - Pull Requests para integrar código.
 
-# ✅ Definition of Ready (DoR)
-
-# 🧩 Definition of Done (DoD)
--La funcionalidad está programada y libre de errores.
--Se realizaron pruebas unitarias y de integración exitosas.
--Cumple con todos los criterios de aceptación definidos.
--Se integra correctamente con el resto del sistema.
--El sistema responde de forma estable y eficiente.
--El código fue revisado y aprobado por el equipo.
--La documentación está actualizada y completa.
--La funcionalidad fue probada en condiciones reales o simuladas.
--Después de la integración, no se generan fallos críticos.
--La historia fue presentada y validada en la revisión del sprint.
-
-
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 📝 Tareas del Proyecto (GitHub Issues)
+### Fase 1: Documentación, Análisis y Diseño
+
+- PROJECT-SETUP-01: Configuración Inicial del Proyecto y Documentación
+- TASK-DOC-01: Recolección y Redacción de Requerimientos del Sistema
+- TASK-DOC-02: Especificación de Roles (Carro, Grúa, Servidor)
+- TASK-DIAGRAMS-01: Diseño de Diagrama de Casos de Uso
+- TASK-DIAGRAMS-02: Diseño de Diagrama de Clases
+- TASK-DIAGRAMS-03: Diseño de Modelo de Estados (Mealy)
+- TASK-DIAGRAMS-04: Diseño del Mapa (Plano de recorrido de carros)
+- TASK-GIT-01: Creación y Organización del Repositorio GitHub
+- TASK-GIT-02: Definición y Documentación de la Estrategia de Branching
+
+### Fase 2: Desarrollo del Carro Seguidor (Hardware + Software)
+
+- **EPIC-CARRO-01**: Plataforma Mecánica y Electrónica
+- TASK-CARRO-HW-01: Diseño y Ensamblaje del Chasis del Carro
+- TASK-CARRO-HW-02: Selección y Montaje de Motores
+- TASK-CARRO-HW-03: Instalación del Sistema de Alimentación (Batería + Regulación)
+- TASK-CARRO-HW-04: Diseño y Fabricación de PCB del Carro
+- **EPIC-CARRO-02**: Sensores y Percepción
+- TASK-CARRO-SENS-01: Integración y Calibración de Sensores de Línea (IR)
+- TASK-CARRO-SENS-02: Integración del Sensor de Obstáculos (Ultrasonido / IR)
+- TASK-CARRO-SENS-03: Implementación del Sistema de Ubicación en Mapa
+- **EPIC-CARRO-03**: Control y Movimiento
+- TASK-CARRO-SW-01: Programación de Control PWM para Motores
+- TASK-CARRO-SW-02: Implementación del Control PID para corrección de trayectoria
+- TASK-CARRO-SW-03: Programación del Driver de Motores (Puente H)
+- TASK-CARRO-SW-04: Lógica de Movimiento y Navegación entre Nodos
+- **EPIC-CARRO-04**: Comunicación
+- TASK-CARRO-COM-01: Integración del Módulo WiFi / ESP32 / NRF / XBee
+- TASK-CARRO-COM-02: Protocolo de Mensajería con Servidor Central
+- TASK-CARRO-COM-03: Envío de Estado (posición, carga, batería)
+
+### Fase 3: Desarrollo de la Grúa
+
+- **EPIC-GRUA-01**: Diseño Mecánico y Electrónico
+- TASK-GRUA-HW-01: Diseño y Ensamblaje de la Estructura de la Grúa
+- TASK-GRUA-HW-02: Selección e Instalación de Servomotores
+- TASK-GRUA-HW-03: Instalación de Sistema de Alimentación y Regulación
+- TASK-GRUA-HW-04: Diseño y Fabricación de PCB de la Grúa
+- **EPIC-GRUA-02**: Diseño Mecánico y Electrónico
+- TASK-GRUA-SW-01: Programación de Servomotores
+- TASK-GRUA-SW-02: Detección de Carga (Sensor / Pinza)
+- TASK-GRUA-SW-03: Secuencia de Agarre, Elevación, Transporte y Liberación
+
+### Fase 4: Desarrollo de la Grúa
+
+- **EPIC-MULTICARRO-01**: Arquitectura de Comunicación
+- TASK-MC-SRV-01: Diseño del Servidor Central (App / PC / ESP32 Maestro)
+- TASK-MC-SRV-02: Implementar Protocolo de Comunicación entre Carros
+- TASK-MC-SRV-03: Sincronización de Mensajes y Estados
+- **EPIC-MULTICARRO-02**: Coordinación y Logística
+- TASK-MC-ALG-01: Algoritmo de Asignación de Tareas a Carros
+- TASK-MC-ALG-02: Gestión de Prioridad y Selección de Carro
+- TASK-MC-ALG-03: Transferencia de Carga entre Carros
+
+### Fase 5: Integración, Pruebas y Optimización
+
+- TEST-01: Pruebas de Movimiento del Carro sin Carga
+- TEST-02: Pruebas de Movimiento con Carga
+- TEST-03: Pruebas del Sistema de Grúa Independiente
+- TEST-04: Pruebas de Sincronización Multicarro
+- TEST-05: Pruebas de Seguridad (evitar colisión / fallo sensor)
+- OPT-01: Ajuste Fino del PID
+- OPT-02: Optimización de Rutas y Nodos
