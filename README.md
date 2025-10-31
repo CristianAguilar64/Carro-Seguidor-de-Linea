@@ -116,6 +116,17 @@ Cada Issue representa una parte funcional claramente definible del proyecto.
 # ✅ Definition of Ready (DoR)
 
 # 🧩 Definition of Done (DoD)
+-La funcionalidad está programada y libre de errores.
+-Se realizaron pruebas unitarias y de integración exitosas.
+-Cumple con todos los criterios de aceptación definidos.
+-Se integra correctamente con el resto del sistema.
+-El sistema responde de forma estable y eficiente.
+-El código fue revisado y aprobado por el equipo.
+-La documentación está actualizada y completa.
+-La funcionalidad fue probada en condiciones reales o simuladas.
+-Después de la integración, no se generan fallos críticos.
+-La historia fue presentada y validada en la revisión del sprint.
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
